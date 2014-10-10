@@ -86,7 +86,7 @@ use Moose::Util::TypeConstraints;
 
 subtype 'WWW.Mechanize.TreeBuilder.LoadClass'
   => as 'Str'
-  => where { Class::MOP::load_class($_) }
+  => where { Class::Load::load_class($_) }
   => message { "Cannot load class $_" };
 
 subtype 'WWW.Mechanize.TreeBuilder.TreeClass'
