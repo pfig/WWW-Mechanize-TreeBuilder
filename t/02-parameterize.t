@@ -4,11 +4,13 @@ use warnings;
 use FindBin;
 use lib "$FindBin::Bin/../t/lib";
 
-use Test::More tests => 9;
+use Test::More tests => 11;
 
 BEGIN { 
   use_ok 'WWW::Mechanize::TreeBuilder';
   use_ok 'MockMechanize';
+  use_ok 'MockTreeBuilder';
+  use_ok 'MockTreeBuilderEle';
 };
 
 my $mech = MockMechanize->new;
